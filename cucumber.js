@@ -1,13 +1,9 @@
-const common = {
-  requireModule: ['@babel/register'],
-  require: ['tests/bdd/steps/*.js'],
-  publishQuiet: false,
-  format: ['progress']
-};
-
+// cucumber.js
 module.exports = {
   default: {
-    ...common,
-    format: ['progress']
+    paths: ['tests/bdd/features/*.feature'],
+    require: ['tests/bdd/features/steps/*.js'],
+    requireModule: ['@babel/register'],
+    format: ['progress', 'html:reports/cucumber-report.html']
   }
 };
