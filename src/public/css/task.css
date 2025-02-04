@@ -1,0 +1,47 @@
+.task-form {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    border-bottom: 1px solid black;
+    padding: 15px;
+}
+.task-form-container {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.task-form-input {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 5px;
+}
+.task-form-submit {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+.task-form-submit button {
+    width: 100%;
+}
+
+.task-card {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    padding: 15px;
+    border-bottom: 1px solid gainsboro;
+}
+.task-card-header {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.task-card-title {
+    text-decoration: underline;
+}
+.task-card-description {
+    flex: 1;
+}
