@@ -9,7 +9,12 @@ function validateMotDePasse(motDePasse) {
     return motDePasse && motDePasse.length >= 8;
 }
 
+function validatePasswordMatch(password, confirmPassword) {
+    return password === confirmPassword;
+}
+
 module.exports = {
     validateEmail,
-    validateMotDePasse
+    validateMotDePasse,
+    validatePasswordMatch
 };

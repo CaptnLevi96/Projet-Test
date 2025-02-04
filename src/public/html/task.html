@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/task.css">
+</head>
+<body>
+    <header>
+        <h5>Projet Test</h1>
+        <p id="user-email" style="word-wrap: break-word;">Bienvenue sur le site de test</p>
+    </header>
+    <form class="task-form" onsubmit="addTask(this, event)">
+        <div >
+            <h1>Ajouter une tâche</h1>
+        </div>
+        <div class="task-form-container">
+            <div class="task-form-input">
+                <label for="titre">Titre</label>
+                <input type="text" id="titre" name="titre" required>
+            </div>
+            <div class="task-form-input">
+                <label for="description">Description</label>
+                <textarea id="description" name="description" required></textarea>
+            </div>
+        </div>
+        <div class="task-form-submit">
+            <button type="form-button" >Ajouter</button>
+        </div>
+    </form>
+    <div id="task-container" class="task-container">
+    </div>
+    <script defer src="/lib.js"></script>
+    <script defer src="/task.js"></script>
+    </body>
+</html>
