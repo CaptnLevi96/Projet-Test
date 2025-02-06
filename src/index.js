@@ -88,7 +88,7 @@ app.post('/api/v1/users', (req, res) => {
   let message = '';
   let user = null;
   if (!validateEmail(email)) {
-    success = fail,se;
+    success = false;
     message = 'Email invalide; veuillez entrer une adresse email valide';
     res.send({ success, message, user });
     return

@@ -10,6 +10,7 @@
     "dev": "nodemon src/index.js",
     "build": "node src/index.js",
     "test": "jest",
+    "test:e2e": "playwright test",
     "test:bdd": "cucumber-js --require tests/bdd/steps/**/*.js tests/bdd/features/**/*.feature",
     "test:auth": "cucumber-js --require tests/bdd/steps/auth.steps.js tests/bdd/features/auth.feature",
     "test:tasks": "cucumber-js --require tests/bdd/steps/task.steps.js tests/bdd/features/tasks.feature",
