@@ -1,9 +1,9 @@
 function displayTasks() {
-    fetch('/api/v1/tasks')
+    const email = localStorage.getItem('userEmail');
+    fetch(`/api/v1/tasks?email=${email}`)
     .then(response => response.json())
     .then(data => {
         const tasks = Object.entries(data.tasks);
-        console.log(tasks);
         const taskElement = document.getElementById('task-container');
         for (let i = 0; i < tasks.length; i++) {
             const taskCard = document.createElement('div');
