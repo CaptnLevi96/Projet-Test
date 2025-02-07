@@ -1,8 +1,11 @@
 name: Playwright E2E Tests 
 on: 
   push:
-    branches: [e2e-test] 
-jobs: 
+  push:
+    branches: [ e2e-test ]
+  pull_request:
+    branches: [ e2e-test ]
+    jobs: 
   e2e-tests: 
     runs-on: ubuntu-latest 
     steps:
