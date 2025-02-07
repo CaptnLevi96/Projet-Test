@@ -1,7 +1,7 @@
 // playwright.config.js
 export default {
   testDir: './tests/e2e',
-  testMatch: '**/*.spec.js',
+  testMatch: '**/*.spec2.js',
   timeout: 60000,
   use: {
     baseURL: 'http://localhost:3000',

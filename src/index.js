@@ -34,9 +34,10 @@ function getTask(id) {
   return currTasks[id];
 }
 
-function getTasks() {
-  const currTasks = JSON.parse(fs.readFileSync(path.join(__dirname, './public/tasks.json')));
-  return currTasks;
+function getTasks(email) {
+  const currTasks = JSON.parse(fs.readFileSync(path.join(__dirname, './public/tasks.json'))) ;
+  let filteredTasks = Object.entries(currTasks).filter(task => task[1].email === email).reduce((acc, [key, value]) => ({...acc, [key]: value}), {});
+  return filteredTasks;
 }
 
 function addTask(titre, description, email) {
@@ -122,7 +123,8 @@ app.post('/api/v1/users', (req, res) => {
 });
 
 app.get('/api/v1/tasks', (req, res) => {
-  const currTasks = getTasks();
+  const { email } = req.query;
+  const currTasks = getTasks(email);
   res.json({success: true, tasks: currTasks});
 });
 
