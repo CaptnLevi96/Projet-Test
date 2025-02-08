@@ -4,8 +4,8 @@
 
 1. **Cloner le dépôt** :
    ```sh
-   git clone https://github.com/VOTRE-UTILISATEUR/PROJET.git
-   cd PROJET
+   git clone https://github.com/CaptnLevi96/Projet-Test.git
+   cd PROJET-TESTS
    ```
 
 2. **Installer les dépendances** :
