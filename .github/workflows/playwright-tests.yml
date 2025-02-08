@@ -4,9 +4,11 @@ on:
   push:
     branches:
       - main
+      - e2e-test
   pull_request:
     branches:
       - main
+      - e2e-test
 
 jobs:
   test:
@@ -37,4 +39,3 @@ jobs:
         with:
           name: playwright-report
           path: playwright-report/
-          retention-days: 7
